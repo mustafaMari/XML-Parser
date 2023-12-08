@@ -1,14 +1,27 @@
+/**
+ * Provides functionality to serialize XMLObjects into an XML string.
+ */
 public class XMLSerializer {
 
     private XMLObject objectToSerialize; 
     private String serializedObject;
     private XMLTagSerializer parentTagSerializer;
 
+    /**
+     * Constructor for XMLSerializer class.
+     *
+     * @param objectToSerialize The XMLObject to be serialized.
+     */
     public XMLSerializer(XMLObject objectToSerialize) {
         this.objectToSerialize = objectToSerialize;
         serializedObject = '';
     }
 
+    /**
+     * Serializes the XMLObject and its children into an XML string.
+     *
+     * @return The serialized XML string.
+     */
     public String serialize() {
         openParentTag();
         appendChildren();

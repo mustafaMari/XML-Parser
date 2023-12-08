@@ -1,13 +1,26 @@
+/**
+ * Provides functionality to deserialize a Dom.XMLNode into an XMLObject.
+ */
 public class XMLTagDeserializer {
     private Dom.XMLNode nodeToDeserialize;
     private XMLObject deserializedNode;
     private Map<String, Object> deserializedUntyped;
 
+    /**
+     * Constructor for XMLTagDeserializer class.
+     *
+     * @param nodeToDeserialize The Dom.XMLNode to be deserialized into an XMLObject.
+     */
     public XMLTagDeserializer(Dom.XMLNode nodeToDeserialize) {
         this.nodeToDeserialize = nodeToDeserialize;
         deserializedNode = new XMLObject(nodeToDeserialize.getName());
     }
 
+    /**
+     * Deserializes the XMLNode into an XMLObject.
+     *
+     * @return The deserialized XMLObject.
+     */
     public XMLObject deserializeNode(){
         appendTagValue();
         appendTagKeys();

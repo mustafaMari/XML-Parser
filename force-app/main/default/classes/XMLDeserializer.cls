@@ -1,14 +1,27 @@
+/**
+ * Provides functionality to deserialize an XML string into an XMLObject.
+ */
 public class XMLDeserializer {
     private String xmlBodyToDeserialize;
     private XMLObject deserializedObject;
     private Dom.Document xmlDocument;
 
+    /**
+     * Constructor for XMLDeserializer class.
+     *
+     * @param xmlBodyToDeserialize The XML body as a string to be deserialized.
+     */
     public XMLDeserializer(String xmlBodyToDeserialize) {
         this.xmlBodyToDeserialize = xmlBodyToDeserialize;
     }
 
+    /**
+     * Deserializes the XML body into an XMLObject.
+     *
+     * @return The deserialized XMLObject.
+     */
     public XMLObject deserialize() {
-        loadAndDeserializeXMLBody();
+        loadAndDeserializeXMLBody();    
         return deserializedObject;
     }
 
